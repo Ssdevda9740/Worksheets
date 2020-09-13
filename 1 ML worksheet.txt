@@ -1,0 +1,187 @@
+1. The value of correlation coefficient will always be:
+C) between -1 and 1 
+
+2. Which of the following cannot be used for dimensionality reduction?
+C) Recursive feature elimination
+
+3. Which of the following is not a kernel in Support Vector Machines?
+C) hyperplane
+
+4. Amongst the following, which one is least suitable for a dataset having non-linear decision boundaries?
+D) Support Vector Classifier
+
+5. In a Linear Regression problem, ‘X’ is independent variable and ‘Y’ is dependent variable, where ‘X’ represents weight in pounds. 
+If you convert the unit of ‘X’ to kilograms, then new coefficient of ‘X’ will be?
+(1 kilogram = 2.205 pounds)
+C) old coefficient of ‘X’ ÷ 2.205 
+
+6. As we increase the number of estimators in ADABOOST Classifier, what happens to the accuracy of the model?
+B) increases
+
+7. Which of the following is not an advantage of using random forest instead of decision trees?
+B) Random Forests explains more variance in data then decision trees
+
+8. Which of the following are correct about Principal Components?
+B) Principal Components are calculated using unsupervised learning techniques
+C) Principal Components are linear combinations of Linear Variables.
+
+9. Which of the following are applications of clustering?
+A) Identifying developed, developing and under-developed countries on the basis of factors like GDP, poverty index, employment rate, population and living index
+D) Identifying different segments of disease based on BMI, blood pressure, cholesterol, blood sugar levels.
+
+10. Which of the following is(are) hyper parameters of a decision tree?
+A) max_depth D) min_samples_leaf
+
+11. What are outliers? Explain the Inter Quartile Range(IQR) method for outlier detection.
+The outliers may suggest experimental errors, variability in a measurement, or an anomaly.
+The age of a person may wrongly be recorded as 200 rather than 20 Years. 
+Such an outlier should definitely be discarded from the dataset
+
+Significance of outliers:
+
+Outliers badly affect mean and standard deviation of the dataset. These may statistically give erroneous results.
+Most machine learning algorithms do not work well in the presence of outlier. 
+So it is desirable to detect and remove outliers.
+Outliers are highly useful in anomaly detection like fraud detection where the fraud transactions 
+are very different from normal transactions.
+
+IQR is used to measure variability by dividing a data set into quartiles.
+The data is sorted in ascending order and split into 4 equal parts. Q1, Q2, Q3 called first, second and third quartiles 
+are the values which separate the 4 equal parts.
+Q1 represents the 25th percentile of the data.
+Q2 represents the 50th percentile of the data.
+Q3 represents the 75th percentile of the data.
+If a dataset has 2n / 2n+1 data points, then
+Q1 = median of the dataset.
+Q2 = median of n smallest data points.
+Q3 = median of n highest data points.
+
+IQR is the range between the first and the third quartiles namely Q1 and Q3: IQR = Q3 – Q1.
+The data points which fall below Q1 – 1.5 IQR or above Q3 + 1.5 IQR are outliers.
+
+12. What is the primary difference between bagging and boosting algorithms?
+Bagging is used when the goal is to reduce the variance of a decision tree classifier. Here the objective is to create several subsets of data from training sample chosen randomly with replacement. Each collection of subset data is used to train their decision trees. As a result, we get an ensemble of different models. Average of all the predictions from different trees are used which is more robust than a single decision tree classifier.
+
+Bagging Steps:
+Suppose there are N observations and M features in training data set. A sample from training data set is taken 
+randomly with replacement.
+A subset of M features are selected randomly and whichever feature gives the best split is used to 
+split the node iteratively.
+The tree is grown to the largest.
+Above steps are repeated n times and prediction is given based on the aggregation of predictions from n number of trees.
+
+Advantages:
+Reduces over-fitting of the model.
+Handles higher dimensionality data very well.
+Maintains accuracy for missing data.
+
+Disadvantages:
+Since final prediction is based on the mean predictions from subset trees, it won’t give precise values for 
+the classification and regression model.
+
+Python Syntax:
+rfm = RandomForestClassifier(n_estimators=80, oob_score=True, n_jobs=-1, random_state=101, 
+max_features = 0.50, min_samples_leaf = 5)
+fit(x_train, y_train)
+predicted = rfm.predict_proba(x_test)
+
+Boosting is used to create a collection of predictors. In this technique, learners are learned sequentially 
+with early learners fitting simple models to the data and then analysing data for errors. 
+Consecutive trees (random sample) are fit and at every step, the goal is to improve the accuracy from the prior tree. 
+When an input is misclassified by a hypothesis, its weight is increased so that next hypothesis is more likely to classify it correctly. This process converts weak learners into better performing model.
+
+Boosting Steps:
+Draw a random subset of training samples d1 without replacement from the training set D to train a weak learner C1
+Draw second random training subset d2 without replacement from the training set 
+and add 50 percent of the samples that were previously falsely classified/misclassified to train a weak learner C2
+Find the training samples d3 in the training set D on which C1 and C2 disagree to train a third weak learner C3
+Combine all the weak learners via majority voting.
+
+Advantages:
+Supports different loss function (we have used ‘binary:logistic’ for this example).
+Works well with interactions.
+
+Disadvantages:
+Prone to over-fitting.
+Requires careful tuning of different hyper-parameters.
+
+Python Syntax:
+from xgboost import XGBClassifier
+xgb = XGBClassifier(objective=’binary:logistic’, n_estimators=70, seed=101)
+fit(x_train, y_train)
+predicted = xgb.predict_proba(x_test)
+
+13. What is adjusted R2 in logistic regression. How is it calculated?
+
+second most common type of regression model is logistic regression, which is appropriate for binary outcome data. 
+How is R squared calculated for a logistic regression model? 
+Well it turns out that it is not entirely obvious what its definition should be.
+Over the years, different researchers have proposed different measures for logistic regression, 
+with the objective usually that the measure inherits the properties of the familiar R squared from linear regression. 
+In this post I'm going to focus on one of them, which is McFadden's R squared, and it is the default 'pseudo R2' value 
+reported by the Stata package. There are certain drawbacks to this measure - if you want to read more 
+about these and some of the other measures, take a look at this 1996 Statistics in Medicine paper 
+by Mittlbock and Schemper.
+
+McFadden's pseudo-R squared
+Logistic regression models are fitted using the method of maximum likelihood - i.e. the parameter estimates
+ are those values which maximize the likelihood of the data which have been observed. 
+McFadden's R squared measure is defined as
+
+R_MCFadden^2=1- (log⁡(L_c))/(log⁡(L_null))
+
+where L_c denotes the (maximized) likelihood value from the current fitted model, and
+ L_null denotes the corresponding value but for the null model - the model with only an intercept and no covariates.
+To try and understand whether this definition makes sense, suppose first that the covariates in our current model in 
+fact give no predictive information about the outcome. For individual binary data, the likelihood contribution of 
+each observation is between 0 and 1 (a probability), and so the log likelihood contribution is negative. 
+If the model has no predictive ability, although the likelihood value for the current model will be (it is always) 
+larger than the likelihood of the null model, it will not be much greater. 
+Therefore the ratio of the two log-likelihoods will be close to 1, and R^{2}_{\text{McFadden}} will be close to zero, 
+as we would hope.
+
+
+14. What is the difference between standardisation and normalisation?
+
+ Normalization is a scaling technique in which values are shifted and rescaled so that they end up ranging between 0 and 1. It is also known as Min-Max scaling.
+
+Here’s the formula for normalization:
+X^'=  (X- X_min)/(X_max- X_min )
+
+Here, Xmax and Xmin are the maximum and the minimum values of the feature respectively.
+
+When the value of X is the minimum value in the column, the numerator will be 0, and hence X’ is 0
+On the other hand, when the value of X is the maximum value in the column, the numerator is equal to the denominator
+ and thus the value of X’ is 1
+If the value of X is between the minimum and the maximum value, then the value of X’ is between 0 and 1
+
+Standardization is another scaling technique where the values are centered around the mean with a unit standard deviation. 
+This means that the mean of the attribute becomes zero and the resultant distribution has a unit standard deviation.
+
+Here’s the formula for standardization:
+X'=  (X- µ)/σ
+
+Feature scaling: Mu is the mean of the feature values and Feature scaling: Sigma is the standard deviation of the 
+feature values. Note that in this case, the values are not restricted to a particular range
+Normalization is good to use when you know that the distribution of your data does not follow a Gaussian distribution.
+This can be useful in algorithms that do not assume any distribution of the data like K-Nearest Neighbors and 
+Neural Networks.
+Standardization, on the other hand, can be helpful in cases where the data follows a Gaussian distribution.
+However, this does not have to be necessarily true. Also, unlike normalization, standardization does not have a 
+bounding range. So, even if you have outliers in your data, they will not be affected by standardization.
+
+15. What is cross-validation? Describe one advantage and one disadvantage of using cross-validation?
+
+Cross-validation is a resampling procedure used to evaluate machine learning models on a limited data sample. 
+The procedure has a single parameter called k that refers to the number of groups that a given data sample is to be
+ split into. As such, the procedure is often called k-fold cross-validation.
+
+Advantages of Cross Validation
+1. Reduces Overfitting: In Cross Validation, we split the dataset into multiple folds and train the algorithm 
+on different folds. This prevents our model from overfitting the training dataset. 
+So, in this way, the model attains the generalization capabilities which is a good sign of a robust algorithm
+
+Disadvantages of Cross Validation
+1. Increases Training Time: Cross Validation drastically increases the training time. 
+Earlier you had to train your model only on one training set, but with Cross Validation you have to train your
+ model on multiple training sets.

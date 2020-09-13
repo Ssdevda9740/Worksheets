@@ -1,0 +1,98 @@
+1. Which of the following is not a core datatype in python?
+B) struct
+
+2. Which of the following is an invalid variable name in python?
+C) 1_no 
+
+3. Which one of the following is a keyword in python?
+A) in
+
+4. In which of the following manner are the operators of the same precedence executed in python?
+A) Left to Right
+
+5. Arrange the following in decreasing order of the precedence when they appear in an expression in python?
+i) Multiplication ii) Division iii) Exponential iv) Parentheses
+C) iv – iii – ii – i 
+
+6. (28//6)**3/3%3 = ?
+C) 0.3333…
+
+7. Which of the following is not equal to x16 ?
+C) x^16
+
+8. a = input(“Enter an integer”). What will be the data type of a?
+B) str
+
+Q9 and Q10 have multiple correct answers. Choose all the correct options to answer your question.
+9. Which of the following statements are correct?
+A) Division and multiplication have same precedence in python
+B) Python’s operators’ precedence is based on PEDMAS
+D) In case of operators’ having same precedence, the one on the left side is executed first.
+
+10. Which of the following is(are) valid statement(s) in python? 
+A) abc = 1,000,000 C) a,b,c = 1000, 2000, 3000 D) a_b_c = 1,000,000
+
+11. Differentiate between a list, tuple, set and dictionary.
+
+List: Lists are just like dynamic sized arrays, declared in other languages (vector in C++ and ArrayList in Java).
+Lists need not be homogeneous always which makes it a most powerful tool in Python.
+The main characteristics of lists are – 
+
+The list is a datatype available in Python which can be written as a list of comma-separated values (items) 
+between square brackets.
+List are mutable .i.e it can be converted into another datatype and can store any data element in it.
+List can store any type of element.
+
+Tuple: Tuple is a collection of Python objects much like a list. The sequence of values stored in a tuple can be of 
+any type, and they are indexed by integers. Values of a tuple are syntactically separated by ‘commas’. 
+Although it is not necessary, it is more common to define a tuple by closing the sequence of values in parentheses. 
+The main charactersitics of tuples are – 
+
+Tuple is a immutable sequence in python.
+It cannot be changed or replaced since it is immutable.
+It is defined under parenthesis().
+Tuples can store any type of element.
+
+Set: In Python, Set is an unordered collection of data type that is iterable, mutable and has no duplicate elements. 
+The major advantage of using a set, as opposed to a list, is that it has a highly optimized method for checking whether
+ a specific element is contained in the set. The main characterisitcs of set are –
+
+Sets are unorder collection of elements or unintended collection of items In python.
+Here the order in which the elements are added into the set is not fixed, it can change frequently.
+It is defined under curly braces{}
+Sets are immutable.i.e it cannot be changed or replaced.
+
+A dictionary is a mapping from keys to values where the keys can be all sorts of different objects, 
+in contrast to lists where the 'keys' can only be numbers. So you can have the_dict = {'abc': 3, 'def': 8}
+and then the_dict['abc'] is 3. They keys of a dict are much like a set: they have no order and you can test for 
+their existence quickly.
+
+12. Are strings mutable in python? Suppose you have a string “I+Love+Python”, 
+write a small code to replace ‘+’ with space in python.
+
+In python, the string data types are immutable. Which means a string value cannot be updated.
+ We can verify this by trying to update a part of the string which will led us to an error.
+
+a="I+love+Python"
+
+b=a.replace("+"," ")
+print(b)
+    
+13. What does the function ord() do in python? Explain with example. Also, write down the function for getting the datatype of a variable in python.
+
+The ord() function in Python accepts a string of length 1 as an argument and returns the unicode code point 
+representation of the passed argument. For example ord('B') returns 66 which is a unicode code point value of 
+character ‘B’. In this tutorial, we will discuss the ord() function with the help of examples.
+
+Python ord() function Example
+In the following example we are finding the unicode code point values of an integer, 
+a character and a special character. The first 128 unicode code points are same as 
+ASCII values which means the unicode code points are same as the ASCII values of these passed strings of length 1.
+
+print("The ASCII value of 9 is",ord('9'))
+
+o/p
+
+The ASCII value of 9 is 57
+
+question 14 and 15 are in the code file ipynb 

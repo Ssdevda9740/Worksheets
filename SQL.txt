@@ -1,0 +1,91 @@
+1. Which of the following is/are DDL commands in SQL?
+A) Create D) ALTER
+
+2. Which of the following is/are DML commands in SQL?
+A) Update B) Delete
+
+3. Full form of SQL is:
+B) Structured Query Language
+
+4. Full form of DDL is:
+B) Data Definition Language
+
+5. DML is:
+A) Data Manipulation Language
+
+6. Which of the following statements can be used to create a table with column B int type and C float type?
+C) Create Table A (B int,C float) 
+
+7. Which of the following statements can be used to add a column D (float type) to the table A created above?
+B) Alter Table A ADD COLUMN D float
+
+8. Which of the following statements can be used to drop the column added in the above question?
+B) Alter Table A Drop Column D
+
+9. Which of the following statements can be used to change the data type (from float to int ) of the column D of table A created in above questions?
+B) Alter Table A Alter Column D int
+
+10. Suppose we want to make Column B of Table A as primary key of the table. By which of the following statements we can do it?
+A) Alter Table A Add Constraint Primary Key B 
+-----------------------------------------------------------------------------------------------------------------
+
+11.what is data warehousing?
+Data ware housing is process for collecting and managing data from varied sources to provide meaningful business insights. 
+A Data warehouse is typically used to connect and analyze business data. 
+The data warehouse is the core of the BI system which is built for data analysis and reporting.
+
+A Data Warehouse works as a central repository where information arrives from one or more data sources. 
+Data flows into a data warehouse from the transactional system and other relational databases.
+
+Data may be:
+Structured
+Semi-structured
+Unstructured data
+
+The data is processed, transformed, and ingested so that users can access the processed data in 
+the Data Warehouse through Business Intelligence tools, SQL clients, and spreadsheets.
+
+12. What is the difference between OLTP VS OLAP?
+Online Analytical Processing (OLAP) is a category of software tools that analyze data stored in a database 
+whereas Online transaction processing (OLTP) supports transaction-oriented applications in a 3-tier architecture.
+
+OLAP creates a single platform for all type of business analysis needs which includes planning, budgeting, forecasting, and analysis 
+while OLTP is useful to administer day to day transactions of an organization.
+
+OLAP is characterized by a large volume of data while OLTP is characterized by large numbers of short online transactions.
+In OLAP, data warehouse is created uniquely so that it can integrate different data sources for building a consolidated database 
+whereas OLTP uses traditional DBMS.
+
+13. What are the various characteristics of data-warehouse?
+There are four prominent data warehouse characteristics:
+
+Subject-oriented–A data warehouse is always a subject oriented as it delivers information about a theme instead 
+of organization’s current operations. It can be achieved on specific theme. That means the data warehousing 
+process is proposed to handle with a specific theme which is more defined. 
+These themes can be sales, distributions, marketing etc.
+
+Integrated: The way data is extracted and transformed is uniform, regardless of the original source.
+
+Time-variant: Data is organized via time-periods (weekly, monthly, annually, etc.).
+
+Non-volatile: A data warehouse is not updated in real-time. It is periodically updated via the uploading of data, 
+protecting it from the influence of momentary change.As the name defines the data resided in data warehouse is permanent. 
+It also means that data is not erased or deleted when new data is inserted.
+
+
+14. What is Star-Schema?
+In the Star Schema, the center of the star can have one fact table and a number of associated dimension tables. 
+It is known as star schema as its structure resembles a star. 
+The star schema is the simplest type of Data Warehouse schema. 
+It is also known as Star Join Schema and is optimized for querying large data sets.
+Every dimension in a star schema is represented with the only one-dimension table.
+The dimension table should contain the set of attributes.
+The dimension table is joined to the fact table using a foreign key
+The dimension table are not joined to each other
+Fact table would contain key and measure
+The Star schema is easy to understand and provides optimal disk usage.
+
+15. What do you mean by SETL?
+SETL is SET Theory Langauge
+(SET Theory Language) A programming language developed by Jack Schwartz in the early 1970s. 
+It is based on set theory and used for mathematical and telecommunications applications.
