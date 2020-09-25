@@ -1,0 +1,69 @@
+1. Write SQL query to create table Customers
+
+CREATE TABLE customers(
+customerNumber int,
+customerName varchar(40),
+contactLastName varcahr(40),
+phone int,
+addressLine1 varchar(40),
+addressLine2 varchar(40),
+city varchar(40),
+state varchar(40),
+postalCode int,
+country varchar(40),
+salesRepEmployeeNumber int,
+creditLimit);
+
+2.Write SQL query to create table Orders.
+
+CREATE TABLE Orders(
+orderNumber int,
+orderDate int,
+requiredDate int,
+shippedDate int,
+status varchar(40),
+comments varchar(40),
+customerNumber int);
+
+3. Write SQL query to show all the columns data from the Orders Table.
+
+DESC orders;
+
+4. Write SQL query to show all the comments from the Orders Table.
+
+SELECT * from orders;
+
+5. Write a SQL query to show orderDate and Total number of orders placed on that date, from Orders table.
+
+SELECT orderDate FROM orders;
+
+6. Write a SQL query to show employeNumber, lastName, firstName of all the employees from employees table.
+
+SELECT employeNumber, lastName, firstName FROM employees;
+
+7. Write a SQL query to show all orderNumber, customerName of the person who placed the respective order.
+
+SELECT orderNumber, customerName FROM customers WHERE person = " "
+
+8. Write a SQL query to show name of all the customers in one column and salerepemployee name in another column
+SELECT customerName, salerepemployee FROM customers;
+
+9. Write a SQL query to show Date in one column and total payment amount of the payments made on that date from the payments table.
+
+SELECT paymentDate, amount FROM payments;
+
+10. Write a SQL query to show all the products productName, MSRP, productDescription from the products table.
+
+SELECT productName, MSRP, productDescription from products;
+
+11. Write a SQL query to print the productName, productDescription of the most ordered product.
+
+12. Write a SQL query to print the city name where maximum number of orders were placed.
+
+13. Write a SQL query to get the name of the state having maximum number of customers.
+
+SELECT MAX(customerName) FROM customers;
+SELECT MAX(state) FROM customers;
+
+14. Write a SQL query to print the employee number in one column and Full name of the employee in the second column for all the employees.
+SELECT employeeNumber, last_name and first_name FROM employees;
