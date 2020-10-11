@@ -1,0 +1,158 @@
+1. Which of the following in sklearn library is used for hyper parameter tuning?
+A) GridSearchCV()
+
+2. In which of the below ensemble techniques trees are trained in parallel?
+A) Random forest
+
+3. In machine learning, if in the below line of code:
+sklearn.svm.SVC (C=1.0, kernel='rbf', degree=3)
+we increasing the C hyper parameter, what will happen?
+B) The regularization will decrease
+
+4. Check the below line of code and answer the following questions:
+sklearn.tree.DecisionTreeClassifier(*, criterion='gini', splitter='best', max_depth=None, min_samples_split=2)
+Which of the following is true regarding max_depth hyper parameter?
+C) both A & B
+
+5. Which of the following is true regarding Random Forests?
+D)None of the above
+
+6. What can be the disadvantage if the learning rate is very high in gradient descent?
+A) Gradient Descent algorithm can diverge from the optimal solution.
+
+7. As the model complexity increases, what will happen?
+B) Bias will decrease, Variance increase
+
+8. Suppose I have a linear regression model which is performing as follows:
+Train accuracy=0.95
+Test accuracy=0.75
+Which of the following is true regarding the model?
+C) model is performing good 
+
+9. Suppose we have a dataset which have two classes A and B. The percentage of class A is 40% and 
+percentage of class B is 60%. Calculate the Gini index and entropy of the dataset.
+
+
+The gini index has the fornula:  gini = 1-p^2
+where p stands for probability
+
+gini= 1-(0.4^2+0.6^2)
+    = 0.48
+
+Entropy = -plog2p
+
+Entropy = [0.6*log2(0.6)] - [0.4*log2(0.4)
+Entropy = 0.1
+
+10. What are the advantages of Random Forests over Decision Tree?
+
+Random forests consist of multiple single trees each based on a random sample of the training data. 
+They are typically more accurate than single decision trees.
+
+Higher resolution in the feature space
+Trees are unpruned. While a single decision tree like CART is often pruned, a random forest tree is 
+fully grown and unpruned, and so, naturally, the feature space is split into more and smaller regions.
+
+Trees are diverse. Each random forest tree is learned on a random sample, and at each node, a random set of 
+features are considered for splitting. Both mechanisms create diversity among the trees.
+
+11. What is the need of scaling all numerical features in a dataset? Name any two techniques used for scaling.
+
+Feature preprocessing is one of the most crucial steps in building a Machine learning model. 
+Too few features and your model won’t have much to learn from. Too many features and we might be 
+feeding unnecessary information to the model. Not only this, but the values in each of the features need to 
+be considered as well.
+
+We know that there are some set rules of dealing with categorical data, as in, encoding them in different ways. 
+However, a large chunk of the process involves dealing with continuous variables. There are various methods of 
+dealing with continuous variables. Some of them include converting them to a normal distribution or converting them 
+to categorical variables, etc.
+
+Oftentimes, we have datasets in which different columns have different units – like one column can be in kilograms,
+while another column can be in centimeters. Furthermore, we can have columns like income which can range from 
+20,000 to 100,000, and even more; while an age column which can range from 0 to 100(at the most). 
+Thus, Income is about 1,000 times larger than age.
+
+MinMax Scaler
+The MinMax scaler is one of the simplest scalers to understand.  It just scales all the data between 0 and 1. The formula for calculating the scaled value is-
+
+x_scaled = (x – x_min)/(x_max – x_min)
+Thus, a point to note is that it does so for every feature separately. Though (0, 1) is the default range, 
+we can define our range of max and min values as well.
+
+Standard Scaler
+Just like the MinMax Scaler, the Standard Scaler is another popular scaler that is very easy to understand and implement.
+
+For each feature, the Standard Scaler scales the values such that the mean is 0 and the standard deviation is 1(or the variance).
+
+x_scaled = x – mean/std_dev
+However, Standard Scaler assumes that the distribution of the variable is normal. 
+Thus, in case, the variables are not normally distributed, we
+
+either choose a different scaler
+or first, convert the variables to a normal distribution and then apply this scaler
+
+But how can we be sure that the model treats both these variables equally? When we feed these features to the model as is, there is every chance that the income will influence the result more due to its larger value. But this doesn’t necessarily mean it is more important as a predictor. So, to give importance to both Age, and Income, we need feature scaling.
+
+12. Write down some advantages which scaling provides in optimization using gradient descent algorithm.
+
+Gradient descent is an optimization algorithm used to find the values of parameters (coefficients) of a function (f) 
+that minimizes a cost function (cost).
+
+Gradient descent is best used when the parameters cannot be calculated analytically (e.g. using linear algebra) 
+and must be searched for by an optimization algorithm.
+
+Think of a large bowl like what you would eat cereal out of or store fruit in. This bowl is a plot of the cost function (f).
+A random position on the surface of the bowl is the cost of the current values of the coefficients (cost).
+
+The bottom of the bowl is the cost of the best set of coefficients, the minimum of the function.
+
+The goal is to continue to try different values for the coefficients, evaluate their cost and select new coefficients that have a slightly better (lower) cost.
+
+Repeating this process enough times will lead to the bottom of the bowl and you will know the values of the coefficients that result in the minimum cost.
+
+Gradient Descent Procedure
+The procedure starts off with initial values for the coefficient or coefficients for the function. These could be 0.0 or a small random value.
+
+coefficient = 0.0
+
+The cost of the coefficients is evaluated by plugging them into the function and calculating the cost.
+
+cost = f(coefficient)
+
+or
+
+cost = evaluate(f(coefficient))
+
+The derivative of the cost is calculated. The derivative is a concept from calculus and refers to the slope of the function at a given point. We need to know the slope so that we know the direction (sign) to move the coefficient values in order to get a lower cost on the next iteration.
+
+delta = derivative(cost)
+
+Now that we know from the derivative which direction is downhill, we can now update the coefficient values. A learning rate parameter (alpha) must be specified that controls how much the coefficients can change on each update.
+
+coefficient = coefficient – (alpha * delta)
+
+This process is repeated until the cost of the coefficients (cost) is 0.0 or close enough to zero to be good enough.
+
+You can see how simple gradient descent is. It does require you to know the gradient of your cost function or the function you are optimizing, but besides that, it’s very straightforward. Next we will see how we can use this in machine learning algorithms.
+
+13. In case of a highly imbalanced dataset for a classification problem, is accuracy a good metric to measure the performance of the model. If not, why?
+
+
+14. What is “f-score" metric? Write its mathematical formula.
+
+The F-score, also called the F1-score, is a measure of a model’s accuracy on a dataset. It is used to evaluate binary classification systems, which classify examples into ‘positive’ or ‘negative’.
+
+The F-score is a way of combining the precision and recall of the model, and it is defined as the harmonic mean of the model’s precision and recall.
+
+The F-score is commonly used for evaluating information retrieval systems such as search engines, and also for many kinds of machine learning models, in particular in natural language processing.
+
+It is possible to adjust the F-score to give more importance to precision over recall, or vice-versa. Common adjusted F-scores are the F0.5-score and the F2-score, as well as the standard F1-score.
+
+F-score Formula
+The formula for the standard F1-score is the harmonic mean of the precision and recall. A perfect model has an F-score of 1.
+
+F1 =2 * (precision * recall)/ (precision + recall)
+
+15. What is the difference between fit(), transform() and fit_transform()?
+The fit() function calculates the values of these parameters. The transform function applies the values of the parameters on the actual data and gives the normalized value. The fit_transform() function performs both in the same step
