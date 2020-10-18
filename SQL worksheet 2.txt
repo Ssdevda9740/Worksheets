@@ -1,0 +1,46 @@
+1. Which of the following constraint requires that there should not be duplicate entries?
+D) Unique
+
+2. Which of the following constraint allows null values in a column?
+C) Null 
+
+3. Which of the following statements are true regarding Primary Key?
+A) Each entry in the primary key uniquely identifies each entry or row in the table
+
+4. Which of the following statements are true regarding Unique Key?
+C) Multiple columns can make a single unique key together
+
+5. Which of the following is/are example of referential constraint?
+D) All of them
+
+6. How many foreign keys are there in the Supplier table?
+C) 2
+
+7. The type of relationship between Supplier table and Product table is:
+A) one to many
+
+8. The type of relationship between Order table and Headquarter table is:
+C) one to one 
+
+9. Which of the following is a foreign key in Delivery table?
+B) supplier id
+
+10. The number of foreign keys in order details is:
+D) 2
+
+11. The type of relationship between Order Detail table and Product table is:
+B) many to one
+
+12. DDL statements perform operation on which of the following database objects?
+C) Table
+
+13. Which of the following statement is used to enter rows in a table?
+A) Insert in to
+
+14. Which of the following is/are entity constraints in SQL?
+B) Unique
+C) Primary Key 
+
+15. Which of the following statements is an example of semantic Constraint?
+B) A blood group can only contain characters
+C) A blood group cannot have null values
