@@ -1,0 +1,30 @@
+1. Which of the following will raise a value error in python?
+D) int(‘32’)
+
+2. What will be the output of round(3.567)?
+C) 4
+
+3. How is the function pow(a,b,c) evaluated in python?
+D) (a**b)**c
+
+4. What will be the output of print(type(type(int))) in python 3?
+A) <class ‘type’>
+
+5. What will be the output of ord(chr(65))?
+C) 65 
+
+6. What is called when a function is defined inside a class?
+B) Function
+
+7. What will be the output of all([1, 0, 5 ,7])?
+B) False
+
+8. Is the output of the function abs() the same as that of the function math.fabs()?
+B) Sometimes
+
+9. Select all correct float numbers in python?
+C) 4.2038 D) 3.0
+
+10. Which of the following is(are) correct statement(s) in python? 
+C) You can call a function with positional and keyword arguments.
+D) Positional arguments must be before keyword arguments in a function call
