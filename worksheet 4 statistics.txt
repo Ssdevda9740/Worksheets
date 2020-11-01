@@ -1,0 +1,141 @@
+1. Bernoulli random variables take (only) the values 1 and 0. 
+a) True
+
+2. Which of the following theorem states that the distribution of averages of iid variables, properly normalized, becomes that of a standard normal as the sample size increases? 
+a) Central Limit Theorem
+
+3. Which of the following is incorrect with respect to use of Poisson distribution? 
+a) Modeling event/time data b) Modeling bounded count data c) Modeling contingency tables d) All of the mentioned
+
+4. Point out the correct statement. 
+c) The square of a standard normal random variable follows what is called chi-squared distribution
+
+5. __________ random variables are used to model rates. 
+c) Poisson
+
+6.Usually replacing the standard error by its estimated value does change the CLT.
+b) False
+
+7.Which of the following testing is concerned with making decisions using data? 
+b) Hypothesis
+
+8.Normalized data are centered at ___ and have units equal to standard deviations of the original data. 
+a) 0
+
+
+9. Which of the following statement is incorrect with respect to outliers? 
+a) Outliers can have varying degrees of influence
+
+10. What do you understand by the term Normal Distribution?
+
+Normal distribution, also known as the Gaussian distribution, is a probability distribution that is
+ symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean.
+ In graph form, normal distribution will appear as a bell curve.
+
+The normal distribution is the most common type of distribution assumed in technical stock market analysis 
+and in other types of statistical analyses. The standard normal distribution has two parameters: 
+the mean and the standard deviation. For a normal distribution, 68% of the observations are within +/- 
+one standard deviation of the mean, 95% are within +/- two standard deviations, and 99.7% are within +-
+ three standard deviations.
+
+
+The normal distribution model is motivated by the Central Limit Theorem. 
+This theory states that averages calculated from independent, identically distributed random variables have 
+approximately normal distributions, regardless of the type of distribution from which the variables are
+sampled (provided it has finite variance). Normal distribution is sometimes confused with symmetrical distribution. 
+Symmetrical distribution is one where a dividing line produces two mirror images, but the actual data could be two
+humps or a series of hills in addition to the bell curve that indicates a normal distribution.
+
+11. How do you handle missing data? What imputation techniques do you recommend?
+
+Missing at Random (MAR): Missing at random means that the propensity for a data point to be missing is not related to the missing data, but it is related to some of the observed data
+Missing Completely at Random (MCAR): The fact that a certain value is missing has nothing to do with its hypothetical value and with the values of other variables.
+Missing not at Random (MNAR): Two possible reasons are that the missing value depends on the hypothetical value (e.g. People with high salaries generally do not want to reveal their incomes in surveys) or missing value is dependent on some other variable’s value (e.g. Let’s assume that females generally don’t want to reveal their ages! Here the missing value in age variable is impacted by gender variable)
+The following are common methods:
+
+Mean imputation
+Simply calculate the mean of the observed values for that variable for all individuals who are non-missing.
+
+It has the advantage of keeping the same mean and the same sample size, but many, many disadvantages. Pretty much every method listed below is better than mean imputation.
+
+Substitution
+Impute the value from a new individual who was not selected to be in the sample.
+
+In other words, go find a new subject and use their value instead.
+
+Hot deck imputation
+A randomly chosen value from an individual in the sample who has similar values on other variables.
+
+In other words, find all the sample subjects who are similar on other variables, then randomly choose one of their values on the missing variable.
+
+One advantage is you are constrained to only possible values. In other words, if Age in your study is restricted to being between 5 and 10, you will always get a value between 5 and 10 this way.
+
+Another is the random component, which adds in some variability. This is important for accurate standard errors.
+
+Cold deck imputation
+A systematically chosen value from an individual who has similar values on other variables.
+
+This is similar to Hot Deck in most ways, but removes the random variation. So for example, you may always choose the third individual in the same experimental condition and block.
+
+Regression imputation
+The predicted value obtained by regressing the missing variable on other variables.
+
+So instead of just taking the mean, you’re taking the predicted value, based on other variables. This preserves relationships among variables involved in the imputation model, but not variability around predicted values.
+
+12. What is A/B testing
+
+We might start thinking about an A/B test based on a question or idea from a colleague. For example, we might have a hunch that SMS reminders for loan repayments will reduce loan defaults. With a little bit of work we can take this question and turn it into a hypothesis and then an A/B test that will evaluate the exact gain (or lack of gain) that results from the new SMS system
+To do this, we first need to form our question as a hypothesis, we then need to work out our randomization strategy, sample size and finally our method of measurement.
+The hypothesis
+A hypothesis is a formal statement describing the relationship you want to test. A hypothesis must be a simple, clear and testable statement (more on test-ability below) that contrasts a control sample (e.g. Layout A) with a treatment sample (e.g. Layout B).
+To form a hypothesis, we re-phrase “does an SMS system improve repayment” into two statements, a null hypothesis and an alternative hypothesis:
+Null hypothesis (H0) : The null hypothesis usually states that there is no difference between treatment and control groups. (To put this another way, we’re saying our treatment outcome will be statistically similar to our control outcome )
+Alternative hypothesis (H1): The alternative hypothesis states that there is a difference between treatment and control groups. (In other words, the treatment outcome will be statistically different to the control outcome)
+Notably, a hypothesis should include reference to the population under study (Amazon.com US visitors, London bank customers etc), the intervention (website layout A and B, targeted loan repayment SMS), the comparison group (what are comparing to), the outcome (what will you measure) and the time (at what point will you measure it).
+Population, Intervention, Comparison, Outcome, Time = PICOT. Remember PICOT when defining your hypotheses.
+To give an example of a well formed hypothesis from our Amazon example:
+Null hypothesis (H0): Amazon.com visitors that receive Layout B will not have higher end-of-visit conversion rates compares to visitors that receive Layout A
+Alternative hypothesis (H1): Amazon.com visitors that receive Layout B will have higher end-of-visit conversion rates compared to visitors that receive layout A
+
+
+13. Is mean imputation of missing data acceptable practice?
+
+Bad practice in general
+If just estimating means: mean imputation preserves the mean of the observed data
+Leads to an underestimate of the standard deviation
+Distorts relationships between variables by “pulling” estimates of the correlation toward zero
+
+14. What is linear regression in statistics?
+Linear regression is a basic and commonly used type of predictive analysis.  The overall idea of regression is to examine two things: (1) does a set of predictor variables do a good job in predicting an outcome (dependent) variable?  (2) Which variables in particular are significant predictors of the outcome variable, and in what way do they–indicated by the magnitude and sign of the beta estimates–impact the outcome variable?  These regression estimates are used to explain the relationship between one dependent variable and one or more independent variables.  The simplest form of the regression equation with one dependent and one independent variable is defined by the formula y = c + b*x, where y = estimated dependent variable score, c = constant, b = regression coefficient, and x = score on the independent variable.
+
+Naming the Variables.  There are many names for a regression’s dependent variable.  It may be called an outcome variable, criterion variable, endogenous variable, or regressand.  The independent variables can be called exogenous variables, predictor variables, or regressors.
+
+Three major uses for regression analysis are (1) determining the strength of predictors, (2) forecasting an effect, and (3) trend forecasting.
+Simple linear regression
+1 dependent variable (interval or ratio), 1 independent variable (interval or ratio or dichotomous)
+
+Multiple linear regression
+1 dependent variable (interval or ratio) , 2+ independent variables (interval or ratio or dichotomous)
+
+Logistic regression
+1 dependent variable (dichotomous), 2+ independent variable(s) (interval or ratio or dichotomous)
+
+Ordinal regression
+1 dependent variable (ordinal), 1+ independent variable(s) (nominal or dichotomous)
+
+Multinomial regression
+1 dependent variable (nominal), 1+ independent variable(s) (interval or ratio or dichotomous)
+
+Discriminant analysis
+1 dependent variable (nominal), 1+ independent variable(s) (interval or ratio)
+
+
+15. What are the various branches of statistics?
+
+The two main branches of statistics are descriptive statistics and inferential statistics. Both of these are employed in scientific analysis of data and both are equally important for the student of statistics.
+
+Descriptive statistics deals with the presentation and collection of data. This is usually the first part of a statistical analysis. It is usually not as simple as it sounds, and the statistician needs to be aware of designing experiments, choosing the right focus group and avoid biases that are so easy to creep into the experiment.
+
+Inferential statistics, as the name suggests, involves drawing the right conclusions from the statistical analysis that has been performed using descriptive statistics. In the end, it is the inferences that make studies important and this aspect is dealt with in inferential statistics.
+
+Most predictions of the future and generalizations about a population by studying a smaller sample come under the purview of inferential statistics. Most social sciences experiments deal with studying a small sample population that helps determine how the population in general behaves. By designing the right experiment, the researcher is able to draw conclusions relevant to his study.
