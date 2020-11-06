@@ -1,0 +1,113 @@
+1. Which of the following is true about model capacity (where model capacity means the ability of neural network to approximate complex functions)?
+B) As number of hidden layers increase, model capacity increases
+
+2. Batch Normalization is helpful because?
+A) It is a very efficient backpropagation technique
+
+3. What if we use a learning rate that’s too large?
+B) Network will converge
+
+
+4. What are the factors to select the depth of neural network?
+i) Type of neural network (e.g. MLP, CNN etc.)
+ii) Input data
+iii) Computation power, i.e. Hardware capabilities and software capabilities
+iv) Learning Rate
+v) The output function to map
+
+C) 1, 3, 4, 5 
+
+5. Suppose you have inputs as x, y, and z with values -2, 5, and -4 respectively.You have a neuron ‘q’ and neuron ‘f’ with functions:
+q = x + y
+f = q * z
+
+7. Which gradient descent technique is more advantageous when the data is too big to handle in RAM simultaneously?
+A) Mini Batch Gradient Descent 
+
+8. Consider the scenario. The problem you are trying to solve has a small amount of data. Fortunately, you have a pre-trained neural network that was trained on a similar problem. Which of the following methodologies would you choose to make use of this pre-trained network?
+C) Fine tune the last couple of layers only
+
+
+9. Which of the following neural network training challenge can be solved using batch normalization?
+A) Overfitting
+C) Restrict activations to become too high or low
+
+10. For a binary classification problem, which of the following activations may be used in output layer?
+B) sigmoid
+C) softmax 
+
+
+
+
+11. What will happen if we do not use activation function in artificial neural networks?
+Activation functions are really important for a Artificial Neural Network to learn and make sense of something really complicated 
+and Non-linear complex functional mappings between the inputs and response variable.They introduce non-linear properties. 
+Their main purpose is to convert a input signal of a node in a A-NN to an output signal.
+
+If we do not apply a Activation function then the output signal would simply be a simple linear function.
+A linear function is just a polynomial of one degree. a linear equation is easy to solve but they are limited in their complexity 
+and have less power to learn complex functional mappings from data. A Neural Network without Activation function would simply be a Linear regression Model,
+which has limited power and does not perform good most of the times.
+
+For theoretical reason lets take a simple function f(x) = ax3+bx2+c, here x3,x2 and x are sort of activation happening of input.
+
+If system is not having those function it would be impossible to map input to output for desired data set.
+
+Activation function help to introduce complexity and ability in system to learn.
+
+
+12. How does forward propagation and backpropagation work inThe goal of the gradient descent is to minimise a given function which, in our case, is the loss function of the neural network. To achieve this goal, it performs two steps iteratively. deep learning?
+
+Forward propagation:
+In the forward propagation, we check what the neural network predicts for the first training example with initial weights and bias. 
+First, we initialize the weights and bias randomly:
+Then we calculate z, the weighted sum of activation and bias:
+z=input*w1 +input*w2+b
+After we have z, we can apply the activation function to it:
+ouput=σ(z)
+
+Backward propagation:
+We can define a cost function that measures how good our neural network performs. For an input, x, and desired output, y, we can calculate the cost of a specific training example as the square of the difference between the network’s output and the desired output, that is,
+ck=(output- y)^2
+where k stands for the training example and the output is assumed to be the activation of the output neuron, and y is the actual desired output.
+The total cost of a training set is the average of the individual cost functions of the data in the training set
+
+13. Explain briefly the following variant of Gradient Descent: Stochastic, Batch, and Mini-batch?
+
+Gradient Descent
+
+The goal of the gradient descent is to minimise a given function which, in our case, is the loss function of the neural network. To achieve this goal, it performs two steps iteratively.
+Compute the slope (gradient) that is the first-order derivative of the function at the current point
+Move-in the opposite direction of the slope increase from the current point by the computed amount
+
+Batch Gradient Descent
+In Batch Gradient Descent, all the training data is taken into consideration to take a single step. We take the average of the gradients of all the training examples and then use that mean gradient to update our parameters. So that’s just one step of gradient descent in one epoch.
+Batch Gradient Descent is great for convex or relatively smooth error manifolds. In this case, we move somewhat directly towards an optimum solution
+
+Stochastic Gradient Descent
+In Batch Gradient Descent we were considering all the examples for every step of Gradient Descent.
+But what if our dataset is very huge. Deep learning models crave for data. 
+The more the data the more chances of a model to be good. Suppose our dataset has 5 million examples, 
+then just to take one step the model will have to calculate the gradients of all the 5 million examples. This does not seem an efficient way. To tackle this problem we have Stochastic Gradient Descent
+
+14. What are the main benefits of Mini-batch Gradient Descent?
+
+Advantages of Mini-Batch Gradient Descent
+Computational Efficiency: In terms of computational efficiency, this technique lies between the two previously introduced techniques.
+Stable Convergence: Another advantage is the more stable converge towards the global minimum since we calculate an average gradient over n samples that results in less noise.
+Faster Learning: As we perform weight updates more often than with stochastic gradient descent, in this case, we achieve a much faster learning process.
+
+15. What is transfer learning?
+
+What is Transfer Learning?
+Transfer learning is a machine learning technique where a model trained on one task is re-purposed on a second related task.
+
+Transfer learning and domain adaptation refer to the situation where what has been learned in one setting … is exploited to improve generalization in another setting
+Transfer learning is an optimization that allows rapid progress or improved performance when modeling the second task.
+
+Transfer learning is the improvement of learning in a new task through the transfer of knowledge from a related task that has already been learned.
+
+
+
+
+
