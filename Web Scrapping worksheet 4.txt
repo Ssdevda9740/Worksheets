@@ -1,0 +1,40 @@
+1. Which of the following functions can be used to get an element from webpage when we know the Name attribute of the element?
+A) get_by_name() 
+
+2. Which of the following functions can be used when you want to locate an element by tag name?
+B) get_element_by_tagsid()
+
+3. In what type of Waits, a WebDriver waits for a certain condition to occur before proceeding further with execution.
+B) Explicit wait
+
+4. Which of the following is an expected condition in selenium (python)?
+ D) All of the above
+
+5. Which of the following is a disadvantage of html5lib parser in beautiful soup?
+D) all of the above
+
+6. What are the advantages of using Scrapy over Selenium for web-scraping?
+D) All of the above
+
+7. Which of the following is (are) true regarding Scrapy?
+A) spiders are classes which define how a certain site will be scrapped.
+
+8. Full form of HTML:
+C) Hyper Text Markup Language 
+
+9. Which among the following is the correct syntax for parsing a html page?
+B) soup=BeautifulSoup(html_doc,’html.parser’)
+10. Which among the following is not a valid parser in BeautifulSoup?
+ D) “html-xml”
+
+11. Which of the following functions is used to go to the next element in the page?
+B) Find_all()
+
+12. Which of the following functions are used to iterate over an element’s siblings that precede it in the tree?
+C) get_siblings() 
+
+13. Which of the following is an argument used in find_all() which tells Beautiful Soup to stop gathering results after it’s found a certain number.
+C) limit 
+
+14. How would you set the recursive argument in find_all() if you want Beautiful Soup to consider only the direct children.
+A) recursive = True 
