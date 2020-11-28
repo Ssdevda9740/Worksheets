@@ -1,0 +1,38 @@
+1. D)
+
+2. D)
+
+3. C)
+
+4. A)
+
+5. C)
+
+6. D)
+
+7. B)
+
+8. A)
+
+9. A), C)
+
+10. B), D)
+
+11. Deep learning is a machine learning technique that teaches computers to do what comes naturally to humans: learn by example. Deep learning is a key technology behind driverless cars, enabling them to recognize a stop sign, or to distinguish a pedestrian from a lamppost. It is the key to voice control in consumer devices like phones, tablets, TVs, and hands-free speakers. Deep learning is getting lots of attention lately and for good reason. It’s achieving results that were not possible before.
+
+In deep learning, a computer model learns to perform classification tasks directly from images, text, or sound. Deep learning models can achieve state-of-the-art accuracy, sometimes exceeding human-level performance. Models are trained by using a large set of labeled data and neural network architectures that contain many layers.
+
+12. Reinforcement learning is the training of machine learning models to make a sequence of decisions. The agent learns to achieve a goal in an uncertain, potentially complex environment. In reinforcement learning, an artificial intelligence faces a game-like situation. The computer employs trial and error to come up with a solution to the problem. To get the machine to do what the programmer wants, the artificial intelligence gets either rewards or penalties for the actions it performs. Its goal is to maximize the total reward.
+Although the designer sets the reward policy–that is, the rules of the game–he gives the model no hints or suggestions for how to solve the game. It’s up to the model to figure out how to perform the task to maximize the reward, starting from totally random trials and finishing with sophisticated tactics and superhuman skills
+
+13. With machine learning, computer systems are programmed to learn from data that is input without being continually reprogrammed. In other words, they continuously improve their performance on a task—for example, playing a game—without additional help from a human. Machine learning is being used in a wide range of fields: art, science, finance, healthcare—you name it. And there are different ways of getting machines to learn. Some are simple, such as a basic decision tree, and some are much more complex, involving multiple layers of artificial neural networks
+
+Some consider deep learning to be the next frontier of machine learning, the cutting edge of the cutting edge. You may already have experienced the results of an in-depth deep learning program without even realizing it! If you’ve ever watched Netflix, you’ve probably seen its recommendations for what to watch. And some streaming-music services choose songs based on what you’ve listened to in the past or songs you’ve given the thumbs-up to or hit the “like” button for. Both of those capabilities are based on deep learning. Google’s voice recognition and image recognition algorithms also use deep learning
+
+14. Perceptron is a linear classifier (binary). Also, it is used in supervised learning. It helps to classify the given input data
+
+15. Artificial Intelligence is the broader concept of machines being able to carry out tasks in a way that we would consider “smart”.
+
+And,
+
+Machine Learning is a current application of AI based around the idea that we should really just be able to give machines access to data and let them learn for themselves.
